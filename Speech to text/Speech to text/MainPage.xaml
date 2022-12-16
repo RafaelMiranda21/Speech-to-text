@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Speech_to_text.MainPage">
+
+    <StackLayout>
+        <Frame BorderColor="DarkGray"
+               CornerRadius="10"
+               HeightRequest="300"
+               WidthRequest="280"
+               Margin="0,20,0,0"
+               HorizontalOptions="Center"
+               VerticalOptions="Start"
+               BackgroundColor="LightGray">
+            <ScrollView x:Name="scroll">
+                <Label x:Name="transcribedText"
+                       Margin="10,10,10,10" />
+            </ScrollView>
+        </Frame>
+
+        <!--Bolinha rodando-->
+        <ActivityIndicator x:Name="transcribingIndicator"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Start"
+                           WidthRequest="300"
+                           IsRunning="False" />
+        
+        <Button x:Name="transcribeButton"
+                WidthRequest="300"
+                HeightRequest="50"
+                Text="Falar"
+                TextColor="White"
+                CornerRadius="10"
+                BackgroundColor="Green"
+                BorderColor="DarkGray"
+                BorderWidth="1"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                Clicked="TranscribeClicked"/>
+
+        <Button x:Name="clearButton"
+                WidthRequest="300"
+                HeightRequest="50"
+                Margin="0,10,0,0"
+                Text="Limpar"
+                TextColor="White"
+                CornerRadius="10"
+                BackgroundColor="red"
+                BorderColor="DarkGray"
+                BorderWidth="1"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+                Clicked="clearButton_Clicked"
+            />
+
+
+    </StackLayout>
+
+</ContentPage>
